@@ -1,0 +1,10 @@
+{
+  "compilerOptions": {
+    "module": "ESNext",
+    "target": "ES6",
+    "moduleResolution": "Node",
+    "baseUrl": ".",
+    "jsx": "react-jsx"
+  },
+  "include": ["src"]
+}
