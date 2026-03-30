@@ -10,7 +10,7 @@ export const useCreateProject = () => {
             console.log(`Project created successfully: ${data}`);
         },
         onError:() => {
-            console.log(`Error creating project`);
+            console.log(`Error while creating project`);
         }
     });
 

@@ -63,10 +63,12 @@ export const CreateProject = () => {
   const { createProjectMutation, isPending } = useCreateProject();
 
   async function handleCreateProject() {
+    console.log("Creating project...");
     try {
       await createProjectMutation();
+      console.log("Now we should redirect to the editor");
     } catch (error) {
-      console.log(error);
+      console.log("Error creating project", error);
     }
   }
 
