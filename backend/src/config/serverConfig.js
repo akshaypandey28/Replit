@@ -4,3 +4,4 @@ dotenv.config(); //it is a function that loads environment variables from a .env
 
 export const PORT = process.env.PORT || 3000;
 
+export const REACT_PROJECT_COMMAND = process.env.REACT_PROJECT_COMMAND;
