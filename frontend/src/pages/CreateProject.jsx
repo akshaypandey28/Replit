@@ -1,5 +1,6 @@
 import { Button, Layout, Typography } from "antd";
-import { useCreateProject } from "../hooks/mutations/useCreateProject";
+import { useCreateProject } from "../hooks/mutations/useCreateProject.js";
+import { useNavigate } from "react-router-dom";
 
 const { Header, Footer, Content } = Layout;
 const { Title, Text } = Typography;
@@ -62,11 +63,15 @@ const footerStyle = {
 export const CreateProject = () => {
   const { createProjectMutation, isPending } = useCreateProject();
 
+  const navigate = useNavigate();
+
   async function handleCreateProject() {
     console.log("Creating project...");
     try {
-      await createProjectMutation();
+      const response = await createProjectMutation(); // response comes from backend
       console.log("Now we should redirect to the editor");
+      navigate(`./project/${response.data}`); // response.data contains the projectId sent by backend
+      
     } catch (error) {
       console.log("Error creating project", error);
     }

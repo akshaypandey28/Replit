@@ -7,7 +7,7 @@ export const useCreateProject = () => {
         
         mutationFn : createProjectApi,
         onSuccess:(data) => {
-            console.log(`Project created successfully: ${data}`);
+            console.log(`Project created successfully via frontend: ${data}`);
         },
         onError:() => {
             console.log(`Error while creating project`);
