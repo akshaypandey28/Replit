@@ -2,8 +2,12 @@
   "compilerOptions": {
     "module": "ESNext",
     "target": "ES6",
-    "moduleResolution": "Node",
+    "moduleResolution": "Bundler",
     "baseUrl": ".",
+    "paths": {
+      "@/*": ["src/*"]
+    },
+    "ignoreDeprecations": "6.0",
     "jsx": "react-jsx"
   },
   "include": ["src"]
