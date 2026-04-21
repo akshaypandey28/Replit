@@ -13,7 +13,7 @@ export const TreeStructure =() => {
         else{
             setTreeStructure(projectId)
         }
-    },[treeStructure,treeStructure])
+    },[treeStructure,projectId])
 
 
     return (
