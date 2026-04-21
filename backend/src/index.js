@@ -7,7 +7,12 @@ import { PORT } from './config/serverConfig.js';
 
 const app = express(); // express is used to handle the http request (connection)
 const server = createServer(app); // created the server of http module
-const io = new Server(server); //server from socket.io handles the web socket request means used to setup the
+const io = new Server(server,{
+    cors:{
+        origin:'*',
+        method: ['GET','POST']
+    }
+}); //server from socket.io handles the web socket request means used to setup the
 //web socket connection
 
 /* http module helps to create a common server object that is (server line 9) and it holds the capabilities
